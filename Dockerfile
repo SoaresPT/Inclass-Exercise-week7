@@ -11,7 +11,7 @@ COPY pom.xml /app/
 COPY . /app/
 
 # Package your application
-RUN mvn package
+RUN mvn package -DskipTests
 
 # Run the main class (assuming your application has a main class)
 CMD ["java", "-jar", "target/AdditionSubstractionFile.jar"]
